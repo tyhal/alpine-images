@@ -1,7 +1,6 @@
-FROM alpine
+FROM alpine:3.10.3
 
 RUN apk --no-cache add git
-
 ENV GODOT_VERSION=tags/3.1.1-stable
 RUN git clone https://github.com/godotengine/godot.git
 WORKDIR /godot
@@ -21,5 +20,3 @@ RUN scons \
     target=release \
     bits=64 \
     -j $(nproc)
-
-RUN ls bin && exit 1
