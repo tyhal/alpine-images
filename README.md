@@ -12,4 +12,3 @@ Try to get builds on:
 
 -   godotengine/godot - GCC works, clang does not
 -   upx/upx - Built for fun - still deps on gcc.so and libstdc++.so
--   hadolint/hadolint - Needs a newer GHC
