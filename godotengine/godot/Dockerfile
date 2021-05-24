@@ -1,4 +1,4 @@
-FROM alpine:3.10.3
+FROM alpine:3.13.5
 
 RUN apk --no-cache add git
 ENV GODOT_VERSION=tags/3.1.1-stable

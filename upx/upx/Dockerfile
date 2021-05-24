@@ -1,4 +1,4 @@
-FROM alpine:3.10.3 as build_upx
+FROM alpine:3.13.5 as build_upx
 RUN apk --no-cache add git
 
 ENV UCL_VERSION=1.03
@@ -32,7 +32,7 @@ RUN apk --no-cache add zlib-dev bash perl-dev
 RUN make all -j
 RUN /upx/src/upx.out /upx/src/upx.out
 
-FROM alpine:3.10.3
+FROM alpine:3.13.5
 RUN apk --no-cache add libgcc libstdc++
 COPY --from=build_upx /upx/src/upx.out /upx
 ENTRYPOINT ["/upx"]
