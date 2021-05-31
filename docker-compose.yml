@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  commercialhaskell-stack:
+    build: commercialhaskell/stack
+    image: ${REPO:-tyhal}/stack:${VERSION:-latest}
+  hadolint-hadolint:
+    build: hadolint/hadolint
+    image: ${REPO:-tyhal}/hadolint:${VERSION:-latest}
+    depends_on:
+      - commercialhaskell-stack
+  remarkjs-remark-lint:
+    build: remarkjs/remark-lint
+    image: ${REPO:-tyhal}/remark:${VERSION:-latest}
+
