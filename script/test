@@ -5,5 +5,4 @@ for dfile in $(find . -maxdepth 3 -name Dockerfile | tr '\n' ' '); do
 	echo "$dfile"
 	imagename="tyhal/$(dirname "$dfile" | cut -c 3- | tr '/' '-')"
 	docker build -t "$imagename" "$(dirname "$dfile")"
-	docker push "$imagename"
 done
