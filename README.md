@@ -7,8 +7,3 @@ Try to get builds on:
     cxx=clang++
     cc=clang
     libc=musl
-
-## Status:
-
--   godotengine/godot - GCC works, clang does not
--   upx/upx - Built for fun - still deps on gcc.so and libstdc++.so
