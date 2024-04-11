@@ -1,0 +1,14 @@
+queue_rules:
+  - name: default
+    conditions:
+      - status-success=docker-build-test
+
+pull_request_rules:
+  - name: automatic merge for Renovate pull requests
+    conditions:
+      - base=main
+      - author=renovate[bot]
+      - status-success=docker-build-test
+    actions:
+      queue:
+        name: default
