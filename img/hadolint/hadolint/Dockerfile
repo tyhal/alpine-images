@@ -1,4 +1,4 @@
-# syntax=docker/dockerfile:1.7
+# syntax=docker/dockerfile:1.8
 
 ARG VERSION=latest
 ARG REPO=tyhal
