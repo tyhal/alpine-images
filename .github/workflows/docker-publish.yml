@@ -28,7 +28,7 @@ jobs:
 
       - name: Stack
         id: stack_build
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: img/commercialhaskell/stack
           builder: ${{ steps.buildx.outputs.name }}
@@ -38,7 +38,7 @@ jobs:
 
       - name: Hadolint
         id: hadolint_build
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: img/hadolint/hadolint
           builder: ${{ steps.buildx.outputs.name }}
@@ -84,7 +84,7 @@ jobs:
 
       - name: Stack
         id: stack_build
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: img/commercialhaskell/stack
           builder: ${{ steps.buildx.outputs.name }}
@@ -95,7 +95,7 @@ jobs:
 
       - name: Hadolint
         id: hadolint_build
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: img/hadolint/hadolint
           builder: ${{ steps.buildx.outputs.name }}
