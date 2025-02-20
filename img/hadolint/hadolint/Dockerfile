@@ -15,7 +15,7 @@ RUN --mount=type=cache,target=/root/.stack \
 RUN --mount=type=cache,target=/root/.stack \
     stack --system-ghc --compiler ghc-${GHC_VERSION} install ShellCheck
 
-FROM alpine:3.13.5 as hadolint
+FROM alpine:3.19.1 as hadolint
 RUN apk --no-cache add gmp libffi
 COPY --from=hadolint-build /root/.local/bin/shellcheck /bin/shellcheck
 COPY --from=hadolint-build /root/.local/bin/hadolint /bin/hadolint
