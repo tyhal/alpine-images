@@ -1,4 +1,4 @@
-FROM alpine:3.13.5 as stack
+FROM alpine:3.19.1 as stack
 ENV GHC_VERSION=8.8.4
 RUN apk add --no-cache git ghc=${GHC_VERSION}-r0 xz wget build-base make ca-certificates \
         && update-ca-certificates
